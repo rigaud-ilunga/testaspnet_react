@@ -3,7 +3,7 @@ namespace test_eteyelo.Models
     public class Etudiant
     {
         [BsonId]
-        public ObjectId Id { get; set; }
+        public string Id { get; set; }
         [Required]
         public string Nom { get; set; }
         [Required]

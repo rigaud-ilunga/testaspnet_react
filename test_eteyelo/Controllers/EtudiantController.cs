@@ -21,7 +21,7 @@ namespace test_eteyelo.Controllers
             return RedirectToAction("List", _contacts.SelectAll());
         }
 
-        public ActionResult List()
+        public ActionResult AfficherTousEtudiant()
         {
 
             return View(
@@ -30,16 +30,16 @@ namespace test_eteyelo.Controllers
 
         public ActionResult Edit(string contactId)
         {
-            return View(_contacts.Get(contactId));
+            return View(_etudiants.Get(contactId));
         }
 
         [HttpPost]
-        public ActionResult Edit(string Id, ContactModel contact)
+        public ActionResult Edit(string Id, EtudiantModels etudiant)
         {
-            this._contacts.UpdateContact(Id, contact);
+            this._etudiants.UpdateContact(Id, etudiant);
 
             return RedirectToAction("List",
-                 _contacts.SelectAll());
+                 _etudiants.SelectAll());
         }
 
     }
