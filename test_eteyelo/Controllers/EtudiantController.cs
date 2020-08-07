@@ -15,16 +15,15 @@ namespace test_eteyelo.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(ContactModel contact)
+        public ActionResult Create(Etudiant etudiant)
         {
-            this._contacts.InsertContact(contact);
-            return RedirectToAction("List", _contacts.SelectAll());
+            this._etudiants.Create(etudiant);
+            return RedirectToAction("List", _etudiants.getAllEtudiant());
         }
 
         public ActionResult AfficherTousEtudiant()
         {
-
-            return View( _etudiants.SelectAll());
+            return View( _etudiants.getAllEtudiant());
         }
 
         public ActionResult Edit(string Id)

@@ -38,7 +38,11 @@ namespace test_eteyelo.Models
             var res = Query<Etudiant>.EQ(et => et.Id, nom);
             return _db.GetCollection<Etudiant>("Etudiants").FindOne(res);
         }
-        public Etudiant Create(Etudiant etu)
+        public Etudiant Get(string id)
+        {
+            return this.Collection.Find(new BsonDocument { { "_id", new ObjectId(id) } }).FirstAsync().Result;
+        }
+        public void Create(Etudiant etu)
         {
             this.Collection.InsertOneAsync(etu);
         }
