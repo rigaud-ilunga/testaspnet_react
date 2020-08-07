@@ -20531,6 +20531,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Rik\\Desktop\\test_eteyelos\\test_eteyelo\\Views\\Home\\EditEtudiant.cshtml",
+      "TargetPath": "Views\\Home\\EditEtudiant.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Rik\\Desktop\\test_eteyelos\\test_eteyelo\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -20543,6 +20548,11 @@
     {
       "FilePath": "c:\\Users\\Rik\\Desktop\\test_eteyelos\\test_eteyelo\\Views\\Home\\AjourterEtudiant.cshtml",
       "TargetPath": "Views\\Home\\AjourterEtudiant.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Rik\\Desktop\\test_eteyelos\\test_eteyelo\\Views\\Home\\ListeEtudiant.cshtml",
+      "TargetPath": "Views\\Home\\ListeEtudiant.cshtml",
       "FileKind": "mvc"
     },
     {
