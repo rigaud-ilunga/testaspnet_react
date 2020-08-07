@@ -24,22 +24,20 @@ namespace test_eteyelo.Controllers
         public ActionResult AfficherTousEtudiant()
         {
 
-            return View(
-                _contacts.SelectAll());
+            return View( _etudiants.SelectAll());
         }
 
-        public ActionResult Edit(string contactId)
+        public ActionResult Edit(string Id)
         {
-            return View(_etudiants.Get(contactId));
+            return View(_etudiants.Get(Id));
         }
 
         [HttpPost]
         public ActionResult Edit(string Id, EtudiantModels etudiant)
         {
-            this._etudiants.UpdateContact(Id, etudiant);
+            this._etudiants.Update(Id, etudiant);
 
-            return RedirectToAction("List",
-                 _etudiants.SelectAll());
+            return RedirectToAction("List",_etudiants.getAllEtudiant());
         }
 
     }

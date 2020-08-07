@@ -40,8 +40,7 @@ namespace test_eteyelo.Models
         }
         public Etudiant Create(Etudiant etu)
         {
-            _db.GetCollection<Etudiant>("Etudiants").Save(etu);
-            return etu;
+            this.Collection.InsertOneAsync(etu);
         }
         public void Update(ObjectId id, Etudiant etu)
         {
@@ -49,6 +48,11 @@ namespace test_eteyelo.Models
             var res = Query<Etudiant>.EQ(etus => etus.Id, id);
             var operation = Update<Etudiant>.Replace(etu);
             _db.GetCollection<Etudiant>("Etudiants").Update(res, operation);
+        }
+
+        public Etudiant getAllEtudiant(){
+            var query = this.Collection.Find(new BsonDocument()).ToListAsync();
+            return query.Result;
         }
         public void Remove(ObjectId id)
         {
