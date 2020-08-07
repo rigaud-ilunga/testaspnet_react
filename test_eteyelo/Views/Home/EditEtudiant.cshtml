@@ -1,10 +1,10 @@
-@model Blog.QueryingMongoDb.Models.ContactModel
+@model test_eteyelo.Models.Etudiant;
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Modifier etudiant";
 }
 
-<h2>Edit contact</h2>
+<h2>Modifier Etudiant</h2>
 
 @using (Html.BeginForm())
 {
@@ -12,42 +12,34 @@
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Edit contact</legend>
+        <legend>Modifier Etudiant</legend>
 
 
 
         @Html.HiddenFor(model => model.Id)
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.NameSurname)
+            @Html.LabelFor(model => model.Nom)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.NameSurname)
-            @Html.ValidationMessageFor(model => model.NameSurname)
+            @Html.EditorFor(model => model.Nom)
+            @Html.ValidationMessageFor(model => model.Nom)
+        </div>
+
+        <class="editor-label">
+            @Html.LabelFor(model => model.Prenom)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Prenom)
+            @Html.ValidationMessageFor(model => model.Prenom)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Email)
+            @Html.LabelFor(model => model.IdPromotion)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Email)
-            @Html.ValidationMessageFor(model => model.Email)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Website)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Website)
-            @Html.ValidationMessageFor(model => model.Website)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Description)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Description)
-            @Html.ValidationMessageFor(model => model.Description)
+            @Html.EditorFor(model => model.IdPromotion)
+            @Html.ValidationMessageFor(model => model.IdPromotion)
         </div>
 
         <p>
@@ -57,7 +49,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "List")
+    @Html.ActionLink("Revenir à la liste", "ListeEtudiant")
 </div>
 
 @section Scripts {
