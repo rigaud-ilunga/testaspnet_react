@@ -20541,6 +20541,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Rik\\Desktop\\test_eteyelos\\test_eteyelo\\Views\\Home\\AjourterEtudiant.cshtml",
+      "TargetPath": "Views\\Home\\AjourterEtudiant.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Rik\\Desktop\\test_eteyelos\\test_eteyelo\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
